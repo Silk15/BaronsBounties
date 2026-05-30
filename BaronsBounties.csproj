@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+            Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{BA27E42F-178C-4E35-B13E-6AF43769E5C0}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>BaronsBounties</RootNamespace>
+        <AssemblyName>BaronsBounties</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <LangVersion>latestmajor</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>embedded</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>embedded</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="IngameDebugConsole.Runtime">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\IngameDebugConsole.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Newtonsoft.Json">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\Newtonsoft.Json.dll</HintPath>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+        <Reference Include="ThunderRoad">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\ThunderRoad.dll</HintPath>
+        </Reference>
+        <Reference Include="TriInspector">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\TriInspector.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.ResourceManager">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\Unity.ResourceManager.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.TextMeshPro">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AnimationModule">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AudioModule">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ParticleSystemModule">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.PhysicsModule">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UI">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\UnityEngine.UI.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UIElementsModule">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VFXModule">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VideoModule">
+          <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Blade &amp; Sorcery\BladeAndSorcery_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Boomstick\BoomstickFire.cs" />
+        <Compile Include="Boomstick\BoomstickGravity.cs" />
+        <Compile Include="Boomstick\BoomstickLightning.cs" />
+        <Compile Include="Boomstick\BoomstickSpell.cs" />
+        <Compile Include="Boomstick\ItemModuleBoomstick.cs" />
+        <Compile Include="Bounties\BountyBoard.cs" />
+        <Compile Include="Bounties\BountyContent.cs" />
+        <Compile Include="Bounties\BountyData.cs" />
+        <Compile Include="Bounties\EnemyBountyData.cs" />
+        <Compile Include="Bounties\IBountyInteractor.cs" />
+        <Compile Include="Bounties\LevelBountyContent.cs" />
+        <Compile Include="Bounties\LevelBountyData.cs" />
+        <Compile Include="Bounties\LevelModuleBountyBoard.cs" />
+        <Compile Include="Bounties\LevelModuleBountySpawner.cs" />
+        <Compile Include="Bounties\LevelModuleBountyRewards.cs" />
+        <Compile Include="Bounties\LevelModuleEnemySpawner.cs" />
+        <Compile Include="Bounties\Modules\BountyModule.cs" />
+        <Compile Include="Bounties\Modules\CrystalHunt\CrystalHuntBountyContent.cs" />
+        <Compile Include="Bounties\Modules\CrystalHunt\CrystalHuntBountyInstanceData.cs" />
+        <Compile Include="Bounties\Modules\CrystalHunt\CrystalHuntEnemyBountyContent.cs" />
+        <Compile Include="Bounties\Modules\CrystalHunt\CrystalHuntLevelBountyContent.cs" />
+        <Compile Include="Bounties\Modules\CrystalHunt\Modules\CrystalHuntBountyModule.cs" />
+        <Compile Include="Bounties\Modules\Sandbox\Modules\SandboxBountyModule.cs" />
+        <Compile Include="Bounties\Modules\Sandbox\SandboxBountyContent.cs" />
+        <Compile Include="Bounties\Modules\Sandbox\SandboxBountyInstanceData.cs" />
+        <Compile Include="Bounties\Modules\Sandbox\SandboxEnemyBountyContent.cs" />
+        <Compile Include="Bounties\Modules\Sandbox\SandboxLevelBountyContent.cs" />
+        <Compile Include="Bounties\Modules\State.cs" />
+        <Compile Include="Bounties\ResolvedDrop.cs" />
+        <Compile Include="Bounties\Reward.cs" />
+        <Compile Include="Bounties\Tutorial\LevelModuleBountyTutorial.cs" />
+        <Compile Include="Bounties\UI\UIBounty.cs" />
+        <Compile Include="Bounties\UI\UIBountyBoard.cs" />
+        <Compile Include="Bounties\UI\UIBountyInfo.cs" />
+        <Compile Include="Cargo\CargoCollectionData.cs" />
+        <Compile Include="Cargo\CargoData.cs" />
+        <Compile Include="Extensions.cs" />
+        <Compile Include="ItemModuleDisableOnSnap.cs" />
+        <Compile Include="ItemModuleOilPot.cs" />
+        <Compile Include="ItemModuleShardBrooch.cs" />
+        <Compile Include="ItemModuleStardial.cs" />
+        <Compile Include="Potions\Gravnado\GravnadoPulse.cs" />
+        <Compile Include="Potions\Gravnado\LiquidGravnadoPotion.cs" />
+        <Compile Include="Potions\Neutron\LiquidNeutronPotion.cs" />
+        <Compile Include="Potions\Neutron\NeutronVortex.cs" />
+        <Compile Include="Potions\Plasma\LiquidPlasmaPotion.cs" />
+        <Compile Include="Potions\Plasma\PlasmaHands.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="BountySaveData.cs" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <Target Name="AfterBuild">
+        <Copy
+                SourceFiles="$(TargetDir)$(TargetName).dll"
+                DestinationFiles="$(BladeAndSorceryPath)\BladeAndSorcery_Data\StreamingAssets\Mods\$(ProjectName)\$(TargetFileName)"
+                OverwriteReadOnlyFiles="true" />
+    </Target>
+</Project>
